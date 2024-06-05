@@ -7,7 +7,22 @@
   <h1>See console for output</h1>
   <script>
     const people = [
-        'james',
+      {
+        fname: 'james',
+        lname: 'jones',
+      },
+      {
+        fname: 'maria',
+        lname: 'carey',
+      }
+    ]
+
+    const callPeople = people.map((person) =>console.log(person.fname))
+    
+  </script>
+</body>
+</html>
+  <!-- 'james',
         'jones',
         'janis',
         'jamil',
@@ -18,11 +33,4 @@
         'jane',
         'janet',
         'janel',
-        'joan',
-    ]
-
-    const callPeople = people.map((person) =>console.log(person))
-    
-  </script>
-</body>
-</html>
+        'joan', -->
