@@ -4,6 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.person {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  background-color: green;
+  color: white;
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto; /* Center the card horizontally */
+  /* No clip-path needed here */
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  bottom: 0; /* Position at the bottom */
+  right: 0;   /* Position at the right edge */
+  width: 50%;  /* Half the width of the card */
+  height: 120px;  /* Adjust height for desired depth */
+  background-color: white; /* Same color as the card */
+  border-radius: 100% 0 0 0%; /* Semi-circle on top right */
+  box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.card p {
+  margin: 0 0 10px;
+}
+
+    </style>
 </head>
 <body>
     <div id="people-details"></div>
@@ -54,5 +100,12 @@
 
         displayPersonDetails(); // Call the function to display the details
     </script>
+
+    <div class="card">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+        <p>Cras venenatis euismod malesuada. Nulla facilisi. Sed ut dapibus nunc. Curabitur vehicula, massa at volutpat.</p>
+        <p>Nam ullamcorper feugiat nisi, at elementum erat fermentum nec. Duis vulputate elit in massa facilisis.</p>
+        <p>Proin quis justo a turpis tempor aliquam. Nulla facilisi. Donec venenatis suscipit venenatis. Vivamus sed justo.</p>
+    </div>
 </body>
 </html>
