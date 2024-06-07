@@ -6,49 +6,60 @@
     <title>Document</title>
     <style>
         body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
-  background-color: #f0f0f0;
-}
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
 
-.person {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+        .person {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-.card {
-  background-color: green;
-  color: white;
-  width: 300px;
-  padding: 20px;
-  border-radius: 10px;
-  position: relative;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 20px auto; /* Center the card horizontally */
-  /* No clip-path needed here */
-}
+        .card {
+            background-color: green;
+            color: white;
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto; /* Center the card horizontally */
+            /* No clip-path needed here */
+        }
 
-.card::after {
-  content: "";
-  position: absolute;
-  bottom: 0; /* Position at the bottom */
-  right: 0;   /* Position at the right edge */
-  width: 50%;  /* Half the width of the card */
-  height: 120px;  /* Adjust height for desired depth */
-  background-color: white; /* Same color as the card */
-  border-radius: 100% 0 0 0%; /* Semi-circle on top right */
-  box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.2); 
-}
+        .card::after {
+            content: "";
+            position: absolute;
+            bottom: 0; /* Position at the bottom */
+            right: 0; /* Position at the right edge */
+            width: 45%; /* Half the width of the card */
+            height: 45%; /* Adjust height for desired depth */
+            background-color: white; /* Same color as the card */
+            border-radius: 100% 50% 50% 50%; /* Semi-circle on top right */
+            box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.2);
+        }
 
-.card p {
-  margin: 0 0 10px;
-}
+        .card img {
+            position: absolute;
+            bottom: -10%;
+            right: -10%;
+            width: 45%; /* Same as the cut-out width */
+            height: 45%; /* Same as the cut-out height */
+            border-radius: 50% 50% 50% 50%; /* Semi-circle */
+            object-fit: cover;
+            border: 5px solid #f0f0f0; /* Border to create space between the card and the image */
+            z-index: 2;
+        }
 
+        .card p {
+            margin: 0 0 10px;
+        }
     </style>
 </head>
 <body>
@@ -106,6 +117,7 @@
         <p>Cras venenatis euismod malesuada. Nulla facilisi. Sed ut dapibus nunc. Curabitur vehicula, massa at volutpat.</p>
         <p>Nam ullamcorper feugiat nisi, at elementum erat fermentum nec. Duis vulputate elit in massa facilisis.</p>
         <p>Proin quis justo a turpis tempor aliquam. Nulla facilisi. Donec venenatis suscipit venenatis. Vivamus sed justo.</p>
+        <img src="https://via.placeholder.com/150/FF5733/FFFFFF/?text=Ad" alt="Advertisement">
     </div>
 </body>
 </html>
