@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="people-details"></div>
+
+    <script>
+        const getPeopleDetails = [{
+            fname: 'John',
+            lname: 'Doe',
+            address: {
+                fadd: 'Jos',
+                sadd: 'Alheri',
+            },
+            businesses: {
+                fb: {
+                    newbiz: 'FX',
+                    oldbiz: 'Coding',
+                }
+            },
+            remark: 'nothing really. only trust and believe'
+        }];
+
+        const displayPersonDetails = () => {
+            const container = document.getElementById('people-details');
+
+            getPeopleDetails.forEach((person) => {
+                const personDiv = document.createElement('div');
+                personDiv.className = 'person';
+
+                const name = document.createElement('h2');
+                name.textContent = `Name: ${person.fname} ${person.lname}`;
+                personDiv.appendChild(name);
+
+                const address = document.createElement('p');
+                address.textContent = `Address: ${person.address.fadd}, ${person.address.sadd}`;
+                personDiv.appendChild(address);
+
+                const businesses = document.createElement('p');
+                businesses.textContent = `Businesses: New - ${person.businesses.fb.newbiz}, Old - ${person.businesses.fb.oldbiz}`;
+                personDiv.appendChild(businesses);
+
+                const remark = document.createElement('p');
+                remark.textContent = `Remark: ${person.remark}`;
+                personDiv.appendChild(remark);
+
+                container.appendChild(personDiv);
+            });
+        };
+
+        displayPersonDetails(); // Call the function to display the details
+    </script>
+</body>
+</html>
